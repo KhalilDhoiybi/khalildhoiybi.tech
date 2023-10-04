@@ -16,6 +16,12 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        logo: ["var(--audiowide-font)", "cursive"],
+        dela: ["var(--dela-font)", "cursive"],
+        sans: ["var(--oxygen-font)", "sans-serif"],
+        serif: ["var(--literata-font)", "serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

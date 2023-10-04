@@ -29,7 +29,7 @@ export default function UnderConstruction() {
         </p>
         <p>
           While we&apos;re putting on the finishing touches, I invite you to
-          check out the other rad features our site my to offer.
+          check out the other sections of my site.
         </p>
         <p>Cheers to what&apos;s to come! 🌌🚀.</p>
       </div>

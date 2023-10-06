@@ -5,8 +5,7 @@ import { AspectRatio } from "../ui/aspect-ratio";
  * UnderConstruction component
  * This component is used to display a placeholder font for pages that are under construction
  */
-
-export default function UnderConstruction() {
+const UnderConstruction = () => {
   return (
     <section className="container space-y-8 py-4">
       <h1 className="font-dela text-xl  md:text-3xl">🚧 Pardon Our Dust! 🚧</h1>
@@ -35,4 +34,6 @@ export default function UnderConstruction() {
       </div>
     </section>
   );
-}
+};
+
+export default UnderConstruction;

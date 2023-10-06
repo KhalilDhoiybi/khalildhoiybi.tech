@@ -1,15 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import {
-  Audiowide,
-  Dela_Gothic_One,
-  Inter,
-  Literata,
-  Oxygen,
-} from "next/font/google";
+import { Audiowide, Dela_Gothic_One, Literata, Oxygen } from "next/font/google";
 
+/**
+ * Root layout
+ * The root layout of the website
+ * fonts are loaded here
+ */
 const audiowide = Audiowide({
   weight: "400",
   subsets: ["latin"],
@@ -57,7 +55,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
           {children}
         </ThemeProvider>
       </body>

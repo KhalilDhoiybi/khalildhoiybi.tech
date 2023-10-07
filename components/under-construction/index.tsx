@@ -9,7 +9,7 @@ const UnderConstruction = () => {
   return (
     <section className="container space-y-8 py-4">
       <h1 className="font-dela text-xl  md:text-3xl">🚧 Pardon Our Dust! 🚧</h1>
-      <AspectRatio ratio={16 / 9} className="bg-muted">
+      <AspectRatio ratio={16 / 9} className="bg-muted rounded-sm">
         <Image
           src="/images/under-construction.jpg"
           className="rounded-md object-cover"
@@ -20,7 +20,7 @@ const UnderConstruction = () => {
       <h2 className="font-serif font-bold text-lg">
         Welcome to the Future Home of Awesomeness!
       </h2>
-      <div className="font-sans space-y-4">
+      <div className="font-sans space-y-4 px-6">
         <p>
           Hey there, intrepid explorer! You&apos;ve stumbled upon a section of
           our digital realm that&apos;s currently undergoing a cosmic makeover

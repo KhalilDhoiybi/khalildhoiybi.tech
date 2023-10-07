@@ -74,14 +74,15 @@ const Cursor: React.FC<CursorProps> = ({ sticktyElement }) => {
     }
   };
 
+  // Mouse over event
   const manageMouseOver = () => {
     setIsHovering(true);
   };
+  // Mouse leave event
   const manageMouseLeave = () => {
     setIsHovering(false);
     animate(cursorRef.current, { scaleX: 1, scaleY: 1 }, { duration: 0.3 });
   };
-
   // Mouse move event listener
   useEffect(() => {
     const element = sticktyElement.current;
@@ -112,6 +113,7 @@ const Cursor: React.FC<CursorProps> = ({ sticktyElement }) => {
     y: useMotionValue(1),
   };
 
+  // Rotation Transform template
   const template = ({
     rotate,
     scaleX,
@@ -127,7 +129,7 @@ const Cursor: React.FC<CursorProps> = ({ sticktyElement }) => {
   return (
     <motion.div
       ref={cursorRef}
-      className="w-4 h-4 bg-black dark:bg-white fixed rounded-full pointer-events-none"
+      className="w-4 h-4 bg-black dark:bg-white fixed rounded-full pointer-events-none hidden md:block"
       transformTemplate={template}
       style={{
         left: smoothMouse.x,

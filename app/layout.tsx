@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Audiowide, Dela_Gothic_One, Literata, Oxygen } from "next/font/google";
+import Footer from "@/components/footer";
 
 /**
  * Root layout
@@ -56,6 +57,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

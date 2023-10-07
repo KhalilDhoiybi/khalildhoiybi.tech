@@ -12,7 +12,7 @@ export default function Home() {
   const sticktyElement = useRef<HTMLDivElement>(null);
 
   return (
-    <main className="max-w-4xl mx-auto">
+    <main className="max-w-4xl mx-auto min-h-screen">
       <Header ref={sticktyElement} />
       <UnderConstruction />
       <Cursor sticktyElement={sticktyElement} />

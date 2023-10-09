@@ -11,7 +11,7 @@ export const personalLinks: LinkType[] = [
   {
     id: "resume",
     name: "Resume",
-    url: "",
+    url: "/downloads/khalil-dhoiybi-resume.pdf",
     icon: FileSpreadsheet,
   },
 ];

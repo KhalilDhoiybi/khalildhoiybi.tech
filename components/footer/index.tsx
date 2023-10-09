@@ -19,7 +19,7 @@ const Footer = () => {
       {/* Nav items */}
       <div className="container space-y-4 w-fit">
         {navItems.map((nav) => (
-          <IconLink key={nav.id} linkItem={nav} />
+          <IconLink key={nav.id} linkItem={nav} navItem={true} />
         ))}
       </div>
     </footer>

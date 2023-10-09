@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { AspectRatio } from "../ui/aspect-ratio";
+import { motion } from "framer-motion";
 
 /**
  * UnderConstruction component
@@ -7,7 +10,12 @@ import { AspectRatio } from "../ui/aspect-ratio";
  */
 const UnderConstruction = () => {
   return (
-    <section className="container space-y-8 py-4">
+    <motion.section
+      className="container space-y-8 py-12"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
       <h1 className="font-dela text-xl  md:text-3xl">🚧 Pardon Our Dust! 🚧</h1>
       <AspectRatio ratio={16 / 9} className="bg-muted rounded-sm">
         <Image
@@ -32,7 +40,7 @@ const UnderConstruction = () => {
         </p>
         <p>Cheers to what&apos;s to come! 🌌🚀.</p>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

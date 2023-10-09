@@ -23,7 +23,7 @@ const Cursor: React.FC<CursorProps> = ({ sticktyElement }) => {
   // Cursor ref
   const cursorRef = useRef(null);
   // Cursor size
-  const size = isHovering ? 70 : 16;
+  const size = isHovering ? 70 : 0;
   // Mouse position
   const mouse = {
     x: useMotionValue(0),
@@ -129,7 +129,7 @@ const Cursor: React.FC<CursorProps> = ({ sticktyElement }) => {
   return (
     <motion.div
       ref={cursorRef}
-      className="w-4 h-4 bg-black dark:bg-white fixed rounded-full pointer-events-none hidden md:block"
+      className="bg-black dark:bg-white fixed rounded-full pointer-events-none hidden md:block"
       transformTemplate={template}
       style={{
         left: smoothMouse.x,

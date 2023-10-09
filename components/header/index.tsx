@@ -5,18 +5,29 @@ import { Button } from "../ui/button";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Header = forwardRef<HTMLDivElement>((_, ref) => {
   const { setTheme, theme } = useTheme();
-
   return (
     <header className="container py-8 flex justify-between max-w-4xl mx-auto relative">
-      <Link href="/">
-        <Button variant="outline">
-          <h1 className="text-2xl font-logo font-black">Khalil Dhoiybi.</h1>
-        </Button>
-      </Link>
-      <div className="absolute z-10 right-8 mix-blend-difference">
+      <motion.div
+        initial={{ opacity: 0, x: -500 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        <Link href="/">
+          <Button variant="outline">
+            <h1 className="text-2xl font-logo font-black">Khalil Dhoiybi.</h1>
+          </Button>
+        </Link>
+      </motion.div>
+      <motion.div
+        className="absolute z-10 right-8 mix-blend-difference"
+        initial={{ opacity: 0, x: 500 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.3 }}
+      >
         {!ref ? (
           <Button
             variant="default"
@@ -57,7 +68,7 @@ const Header = forwardRef<HTMLDivElement>((_, ref) => {
             ></div>
           </Button>
         )}
-      </div>
+      </motion.div>
     </header>
   );
 });

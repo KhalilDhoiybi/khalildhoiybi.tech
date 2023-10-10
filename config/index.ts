@@ -1,6 +1,11 @@
-import { socialLinks } from "./social-links";
-import { personalLinks } from "./personal-links";
-import { navItems } from "./nav-items";
+import {
+  socialLinks,
+  socialGithub,
+  socialLinkedin,
+  socialTwitter,
+} from "./social-links";
+import { personalLinks, personalEmail, personalResume } from "./personal-links";
+import { navItems, navAbout, navBlog } from "./nav-items";
 import { LucideIcon } from "lucide-react";
 
 interface LinkType {
@@ -10,5 +15,16 @@ interface LinkType {
   icon?: LucideIcon;
 }
 
-export { socialLinks, personalLinks, navItems };
+export {
+  socialLinks,
+  socialGithub,
+  socialLinkedin,
+  socialTwitter,
+  personalLinks,
+  personalEmail,
+  personalResume,
+  navItems,
+  navAbout,
+  navBlog,
+};
 export type { LinkType };

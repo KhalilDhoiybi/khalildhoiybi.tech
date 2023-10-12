@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Audiowide, Dela_Gothic_One, Literata, Oxygen } from "next/font/google";
 import Footer from "@/components/footer";
+import { BottomBanner } from "@/components/banner";
 
 /**
  * Root layout
@@ -56,8 +57,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {/* <TopBanner /> */}
           {children}
           <Footer />
+          <BottomBanner />
         </ThemeProvider>
       </body>
     </html>

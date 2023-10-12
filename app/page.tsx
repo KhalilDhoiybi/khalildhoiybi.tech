@@ -2,9 +2,8 @@
 
 import Cursor from "@/components/cursor";
 import Header from "@/components/header";
-import { Hero } from "@/components/home";
-import FinalWords from "@/components/home/final-words";
-import UnderConstruction from "@/components/under-construction";
+import { FinalWords, Hero, Stickers } from "@/components/home";
+import { StickerScreen } from "@/components/stickers";
 import { useRef } from "react";
 
 /**
@@ -14,11 +13,15 @@ export default function Home() {
   const sticktyElement = useRef<HTMLDivElement>(null);
 
   return (
-    <main className="max-w-4xl mx-auto min-h-screen">
+    <>
       <Header ref={sticktyElement} />
-      <Hero />
-      <FinalWords />
+      <main className="max-w-4xl mx-auto min-h-screen py-4 md:py-8 overflow-hidden">
+        <Hero />
+        <Stickers />
+        <FinalWords />
+      </main>
       <Cursor sticktyElement={sticktyElement} />
-    </main>
+      <StickerScreen />
+    </>
   );
 }

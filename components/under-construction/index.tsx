@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 const UnderConstruction = () => {
   return (
     <motion.section
-      className="container space-y-8 py-12"
+      className="container space-y-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}

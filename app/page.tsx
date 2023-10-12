@@ -3,6 +3,7 @@
 import Cursor from "@/components/cursor";
 import Header from "@/components/header";
 import { Hero } from "@/components/home";
+import FinalWords from "@/components/home/final-words";
 import UnderConstruction from "@/components/under-construction";
 import { useRef } from "react";
 
@@ -16,7 +17,7 @@ export default function Home() {
     <main className="max-w-4xl mx-auto min-h-screen">
       <Header ref={sticktyElement} />
       <Hero />
-      <UnderConstruction />
+      <FinalWords />
       <Cursor sticktyElement={sticktyElement} />
     </main>
   );

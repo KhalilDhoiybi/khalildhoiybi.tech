@@ -54,14 +54,12 @@ const Hero = () => {
             Welcome To My Digital Playground!
           </h1>
           <p>
-            Greetings! I&apos;m thrilled to have you here. As a passionate
-            full-stack developer, I embark on journeys of code, crafting
-            seamless digital experiences from concept to completion. Whether
-            it&apos;s front-end magic or back-end wizardry, I&apos;m dedicated
-            to turning ideas into elegant, functional solutions. Explore my
-            portfolio and get a glimpse into the world of my creations. Feel
-            free to reach out - let&apos;s collaborate and build something
-            amazing together!
+            Greetings! I&apos;m thrilled to have you here. As a passionate{" "}
+            <span className="font-bold">full-stack developer</span>, I embark on
+            journeys of code, crafting seamless digital experiences from concept
+            to completion. Whether it&apos;s front-end magic or back-end
+            wizardry, I&apos;m dedicated to turning ideas into elegant,
+            functional solutions.
           </p>
         </div>
       </div>

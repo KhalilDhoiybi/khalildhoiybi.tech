@@ -1,4 +1,4 @@
 import StickerPanel from "./sticker-panel";
-import StickerScreen from "./sticker-screen";
+import StickerLayout from "./sticker-layout";
 
-export { StickerPanel, StickerScreen };
+export { StickerPanel, StickerLayout };

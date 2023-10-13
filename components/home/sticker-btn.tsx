@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 
-const Stickers = () => {
+interface StickerProps {
+  openStickerPanel: () => void;
+}
+
+const Stickers: React.FC<StickerProps> = ({ openStickerPanel }) => {
   return (
     <motion.section
       className="container py-4"
@@ -10,7 +14,9 @@ const Stickers = () => {
       transition={{ duration: 0.8 }}
     >
       <div className="border-2 rounded-lg py-8 flex justify-center">
-        <Button className="font-dela">Check Out My Stickers</Button>
+        <Button className="font-dela" onClick={openStickerPanel}>
+          Check Out My Stickers
+        </Button>
       </div>
     </motion.section>
   );

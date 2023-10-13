@@ -1,15 +1,21 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-const StickerScreen = () => {
+interface StickerScreenProps {
+  children: React.ReactNode;
+}
+
+const StickerLayout: React.FC<StickerScreenProps> = ({ children }) => {
   const stickerRef = useRef(null);
 
   return (
     <>
       <motion.div
-        className="w-screen h-full absolute -z-10 top-0 left-0"
+        className="w-screen h-full -z-10 top-0 left-0"
         ref={stickerRef}
-      />
+      >
+        {children}
+      </motion.div>
       {/* <motion.div
         className="top-0 left-0 w-20 h-20 bg-primary absolute z-50 hover:cursor-pointer"
         drag
@@ -25,4 +31,4 @@ const StickerScreen = () => {
   );
 };
 
-export default StickerScreen;
+export default StickerLayout;

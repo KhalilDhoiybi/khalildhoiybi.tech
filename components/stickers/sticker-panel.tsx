@@ -1,3 +1,5 @@
+"use client";
+
 import { IterationCcw, Plus, X } from "lucide-react";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
@@ -5,11 +7,19 @@ import { motion } from "framer-motion";
 interface StickerPanelProps {
   isStickerPanel: boolean;
   closeStickerPanel: () => void;
+  addSticker: () => void;
+  resetStickers: () => void;
 }
 
+/**
+ * Sticker panel
+ * Used to add and reset stickers
+ */
 const StickerPanel: React.FC<StickerPanelProps> = ({
   isStickerPanel,
   closeStickerPanel,
+  addSticker,
+  resetStickers,
 }) => {
   return (
     <motion.div
@@ -40,10 +50,10 @@ const StickerPanel: React.FC<StickerPanelProps> = ({
           },
         }}
       >
-        <Button variant="outline" size="icon">
+        <Button variant="outline" size="icon" onClick={addSticker}>
           <Plus />
         </Button>
-        <Button variant="outline" size="icon">
+        <Button variant="outline" size="icon" onClick={resetStickers}>
           <IterationCcw />
         </Button>
         <Button variant="outline" size="icon" onClick={closeStickerPanel}>

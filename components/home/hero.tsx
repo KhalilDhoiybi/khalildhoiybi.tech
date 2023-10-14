@@ -44,6 +44,7 @@ const Hero = () => {
                 className="rounded-full md:rounded-md object-cover"
                 alt="under-construction"
                 fill
+                sizes="100%"
               />
             </AspectRatio>
           </div>

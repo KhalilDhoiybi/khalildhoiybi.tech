@@ -26,24 +26,25 @@ import {
 const Hero = () => {
   return (
     <motion.section
-      className="container py-4 md:py-8 rounded-lg"
+      className="container rounded-lg"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
     >
       <div className="md:grid grid-cols-4 space-y-6 md:space-y-0">
         {/* Profile pic */}
-        <div className="container h-full flex justify-center items-center">
+        <div className="container h-full flex justify-center">
           <div className="w-40 h-40 overflow-hidden">
             <AspectRatio
               ratio={1 / 1}
-              className="bg-secondary dark:bg-primary rounded-full md:rounded-lg border-4 dark:border-primary"
+              className="bg-secondary rounded-full md:rounded-lg border-4 border-secondary"
             >
               <Image
                 src="/images/profile-image.jpeg"
                 className="rounded-full md:rounded-md object-cover"
                 alt="under-construction"
                 fill
+                sizes="100%"
               />
             </AspectRatio>
           </div>

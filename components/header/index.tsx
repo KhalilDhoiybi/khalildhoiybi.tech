@@ -49,7 +49,7 @@ const Header = forwardRef<HTMLDivElement>((_, ref) => {
           <Button
             variant="default"
             size="icon"
-            className="pointer-events-none text-black dark:text-white"
+            className="pointer-events-none text-black dark:text-white hover:text-white dark:hover:text-black bg-[#068ce9] dark:hover:bg-[#068ce9] dark:bg-primary"
             onClick={() => {
               if (theme === "dark") {
                 setTheme("light");

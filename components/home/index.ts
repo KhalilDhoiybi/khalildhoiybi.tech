@@ -1,3 +1,5 @@
 import Hero from "./hero";
+import FinalWords from "./final-words";
+import Stickers from "./sticker-btn";
 
-export { Hero };
+export { Hero, FinalWords, Stickers };

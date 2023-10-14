@@ -10,13 +10,13 @@ interface StickerProps {
   stickerCount: number;
   stickerIndex: number;
   stickerCoord: {
-    top: number;
-    left: number;
+    top: string;
+    left: string;
   };
 }
 
 /**
- * Sticker
+ * Sticker component
  */
 const Sticker: React.FC<StickerProps> = ({
   sticker,
@@ -25,48 +25,25 @@ const Sticker: React.FC<StickerProps> = ({
   stickerIndex,
   stickerCoord,
 }) => {
+  if (stickerCount < stickerIndex) return null;
+
   return (
     <motion.div
-      initial={false}
-      animate={stickerCount >= stickerIndex ? "open" : "closed"}
+      className="w-28 h-28 md:w-44 md:h-44 absolute z-50 hover:cursor-pointer"
+      style={stickerCoord}
+      whileTap={{ scale: 1.3, cursor: "grabbing" }}
+      drag
+      dragConstraints={stickerScreenRef}
     >
-      <motion.div
-        className="w-28 h-28 md:w-44 md:h-44 absolute z-50 hover:cursor-pointer"
-        style={stickerCoord}
-        whileTap={{ scale: 1.3, cursor: "grabbing" }}
-        drag
-        dragConstraints={stickerScreenRef}
-        variants={{
-          open: {
-            clipPath: "inset(0% 0% 0% 0% round 10px)",
-            transition: {
-              type: "spring",
-              bounce: 0,
-              duration: 0.7,
-              delayChildren: 0.3,
-              staggerChildren: 0.05,
-            },
-          },
-          closed: {
-            clipPath: "inset(10% 50% 90% 50% round 10px)",
-            transition: {
-              type: "spring",
-              bounce: 0,
-              duration: 0.3,
-            },
-          },
-        }}
-      >
-        <AspectRatio ratio={1 / 1}>
-          <Image
-            src={sticker.url}
-            className="pointer-events-none object-contain"
-            alt={sticker.name}
-            fill
-            sizes="100%"
-          />
-        </AspectRatio>
-      </motion.div>
+      <AspectRatio ratio={1 / 1}>
+        <Image
+          src={sticker.url}
+          className="pointer-events-none object-contain"
+          alt={sticker.name}
+          fill
+          sizes="100%"
+        />
+      </AspectRatio>
     </motion.div>
   );
 };

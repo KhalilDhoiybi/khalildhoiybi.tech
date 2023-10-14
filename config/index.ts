@@ -9,6 +9,10 @@ import { navItems, navAbout, navBlog } from "./nav-items";
 import { LucideIcon } from "lucide-react";
 import { stickers, stickersCoordinates } from "./stickers";
 
+/**
+ * @description
+ * This file is used to export all the config files in one place.
+ */
 interface LinkType {
   id: string;
   name: string;
@@ -20,6 +24,11 @@ interface StickerType {
   id: string;
   name: string;
   url: string;
+}
+
+interface StickerCoordType {
+  top: string;
+  left: string;
 }
 
 export {
@@ -36,4 +45,4 @@ export {
   stickers,
   stickersCoordinates,
 };
-export type { LinkType, StickerType };
+export type { LinkType, StickerType, StickerCoordType };

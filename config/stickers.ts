@@ -1,4 +1,9 @@
-import { StickerType } from ".";
+import { StickerCoordType, StickerType } from ".";
+
+/**
+ * @description
+ * Stickers data objects.
+ */
 
 const archSticker: StickerType = {
   id: "arch",
@@ -95,50 +100,81 @@ const zodSticker: StickerType = {
   name: "Zod",
   url: "/images/stickers/zod.png",
 };
-
-export const stickersCoordinates = [
+/**
+ * @description
+ * Sticker coordinates are used to position the stickers on the screen.
+ */
+export const stickersCoordinates: StickerCoordType[] = [
   {
-    top: 100,
-    left: 100,
+    top: "10%",
+    left: "10%",
   },
   {
-    top: 300,
-    left: 100,
+    top: "30%",
+    left: "10%",
   },
   {
-    top: 500,
-    left: 100,
+    top: "50%",
+    left: "10%",
   },
   {
-    top: 700,
-    left: 100,
+    top: "70%",
+    left: "10%",
   },
   {
-    top: 900,
-    left: 100,
+    top: "70%",
+    left: "25%",
   },
   {
-    top: 100,
-    left: 100,
+    top: "70%",
+    left: "40%",
   },
   {
-    top: 300,
-    left: 100,
+    top: "70%",
+    left: "55%",
   },
   {
-    top: 500,
-    left: 100,
+    top: "70%",
+    left: "70%",
   },
   {
-    top: 700,
-    left: 100,
+    top: "50%",
+    left: "70%",
   },
   {
-    top: 900,
-    left: 100,
+    top: "30%",
+    left: "70%",
+  },
+  {
+    top: "10%",
+    left: "70%",
+  },
+  {
+    top: "10%",
+    left: "55%",
+  },
+  {
+    top: "10%",
+    left: "40%",
+  },
+  {
+    top: "10%",
+    left: "25%",
+  },
+  {
+    top: "40%",
+    left: "25%",
+  },
+  {
+    top: "40%",
+    left: "55%",
   },
 ];
 
+/**
+ * @description
+ * Stickers are used to display the stickers on the screen.
+ */
 export const stickers: StickerType[] = [
   archSticker,
   astroSticker,

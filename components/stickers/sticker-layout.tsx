@@ -1,21 +1,23 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import Sticker from "./sticker";
-import { StickerType, stickers, stickersCoordinates } from "@/config";
+import { StickerCoordType, StickerType } from "@/config";
 
 interface StickerScreenProps {
   children: React.ReactNode;
   stickerCount: number;
-  shuffleStickers: StickerType[];
+  shuffledStickers: StickerType[];
+  stickersCoords: StickerCoordType[];
 }
 
 /**
- * Sticker screen
+ * Sticker screen layout
  */
 const StickerLayout: React.FC<StickerScreenProps> = ({
   children,
   stickerCount,
-  shuffleStickers,
+  shuffledStickers,
+  stickersCoords,
 }) => {
   const stickerScreenRef = useRef(null);
 
@@ -27,14 +29,14 @@ const StickerLayout: React.FC<StickerScreenProps> = ({
       >
         {children}
       </motion.div>
-      {shuffleStickers.map((sticker, index) => (
+      {shuffledStickers.map((sticker, index) => (
         <Sticker
           key={sticker.id}
           sticker={sticker}
           stickerScreenRef={stickerScreenRef}
           stickerCount={stickerCount}
           stickerIndex={index}
-          stickerCoord={stickersCoordinates[index]}
+          stickerCoord={stickersCoords[index]}
         />
       ))}
     </>
